@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineering Exam Preparation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="ALPHA LOGO.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>SE Exam Prep</h1>
+                    <p class="subtitle">Comprehensive Software Engineering Resource</p>
+                </div>
+                <button id="navToggle" class="nav-toggle" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+                <div class="progress-indicator">
+                    <!-- <span id="progressText">Progress: 0/7 Sections</span> -->
+                    <!-- <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div> -->
+                </div>
+            </div>
+        </header>
+        <div id="navOverlay" class="nav-overlay" hidden></div>
+
+        <div class="main-layout">
+            <!-- Sidebar Navigation -->
+            <aside class="sidebar" id="sidebar">
+                <nav class="nav-menu">
+                    <div class="nav-section">
+                        <h3 class="nav-title">Sections</h3>
+                        <ul class="nav-list">
+                            <li><a href="#section-1" class="nav-link" data-section="1">1. Fundamentals</a></li>
+                            <li><a href="#section-2" class="nav-link" data-section="2">2. Engineering Approach</a></li>
+                            <li><a href="#section-3" class="nav-link" data-section="3">3. Advanced Models</a></li>
+                            <li><a href="#section-4" class="nav-link" data-section="4">4. Requirements</a></li>
+                            <li><a href="#section-5" class="nav-link" data-section="5">5. Modeling & Design</a></li>
+                            <li><a href="#section-6" class="nav-link" data-section="6">6. QA & Testing</a></li>
+                            <li><a href="#section-7" class="nav-link" data-section="7">7. Maintenance</a></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="nav-section">
+                        <h3 class="nav-title">Tools</h3>
+                        <button id="resetBtn" class="nav-button">Reset Progress</button>
+                        <button id="printBtn" class="nav-button">Print Content</button>
+                    </div> -->
+                </nav>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="main-content">
+                <!-- Section 1 -->
+                <section id="section-1" class="content-section">
+                    <div class="section-header">
+                        <h2>Section 1: Course Introduction and Fundamentals</h2>
+                        <span class="section-badge">1</span>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>1.1 Software Engineering Introduction</h3>
+                        <p>Software Engineering represents a systematic approach to the design, development, and maintenance of software systems. It integrates principles from computer science, project management, and engineering disciplines to create reliable, efficient, and maintainable software solutions.</p>
+                        
+                        <div class="definition-box">
+                            <h4>Core Definitions:</h4>
+                            <p><strong>Program:</strong> A sequence of instructions written in a programming language that can be executed by a computer to perform specific tasks.</p>
+                            <p><strong>Software:</strong> All non-physical components of a computing system, including programs, data, documentation, and configuration files.</p>
+                            <p><strong>Engineering:</strong> The practical application of scientific and mathematical principles to design and build structures, machines, or systems.</p>
+                            <p><strong>Software Engineering (SE):</strong> The disciplined application of engineering principles to software development, encompassing the entire lifecycle from requirements to maintenance.</p>
+                            <p><strong>Computer Science (CS):</strong> Focuses on theoretical foundations of computation, algorithms, data structures, and computational complexity.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>1.2 Software Engineering Terminology</h3>
+                        <p><strong>Method:</strong> A systematic procedure or technique for accomplishing a task.</p>
+                        <p><strong>Tool:</strong> Software or hardware that supports the execution of methods.</p>
+                        <p><strong>Procedure:</strong> A step-by-step description of how to perform a task or apply a method.</p>
+                        <p><strong>Paradigm:</strong> A fundamental style or approach to programming and problem-solving.</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>1.3 Error, Fault, and Failure</h3>
+                        <div class="definition-box">
+                            <p><strong>Error:</strong> A human action that results in incorrect code or logic.</p>
+                            <p><strong>Fault:</strong> The manifestation of an error in the code; a defect in the software.</p>
+                            <p><strong>Failure:</strong> Occurs when a fault is executed and causes the software to behave incorrectly.</p>
+                            <p><strong>Relationship:</strong> Error → Fault → Failure</p>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>1.4 Systems Approach</h3>
+                        <p>A <strong>System</strong> is an integrated set of elements designed to accomplish a defined objective. Systems consist of <strong>Objects</strong> (entities with properties and state) and <strong>Activities</strong> (processes and operations).</p>
+                        <p><strong>Relationships between Objects and Activities:</strong> Objects are acted upon by activities, and activities operate on objects to transform their state.</p>
+                        <p><strong>Interrelated Systems and Sub-systems:</strong> Complex systems are often composed of interconnected sub-systems that can be analyzed independently while understanding their interactions.</p>
+                    </div>
+
+                    <!-- Quiz for Section 1 -->
+                    <div class="quiz-container" id="quiz-1">
+                        <h3 class="quiz-title">Self-Assessment Quiz: Section 1</h3>
+                        <div id="quiz-content-1" class="quiz-content"></div>
+                        <button class="quiz-submit-btn" data-quiz="1">Submit Quiz</button>
+                        <div id="quiz-results-1" class="quiz-results" style="display: none;"></div>
+                    </div>
+                </section>
+
+                <!-- Section 2 -->
+                <section id="section-2" class="content-section">
+                    <div class="section-header">
+                        <h2>Section 2: Engineering Approach and Process Models</h2>
+                        <span class="section-badge">2</span>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>2.1 Phases of Software Engineering</h3>
+                        <p>The software engineering lifecycle typically includes these phases:</p>
+                        <ul class="content-list">
+                            <li><strong>Requirements Analysis:</strong> Understanding what the software must do and documenting specifications.</li>
+                            <li><strong>Design:</strong> Creating the architecture and detailed design of the system.</li>
+                            <li><strong>Implementation:</strong> Writing code according to design specifications.</li>
+                            <li><strong>Testing:</strong> Verifying that the software meets requirements and identifying defects.</li>
+                            <li><strong>Deployment:</strong> Releasing the software to production environments.</li>
+                            <li><strong>Maintenance:</strong> Providing ongoing support, fixing bugs, and implementing enhancements.</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>2.2 Development Team Members and Roles</h3>
+                        <div class="definition-box">
+                            <p><strong>Project Manager:</strong> Oversees project schedule, budget, and resource allocation.</p>
+                            <p><strong>Business Analyst:</strong> Gathers requirements from stakeholders and documents specifications.</p>
+                            <p><strong>Software Architect:</strong> Designs overall system structure and makes technology decisions.</p>
+                            <p><strong>Software Developer:</strong> Implements code based on design specifications.</p>
+                            <p><strong>Quality Assurance Engineer:</strong> Develops test plans and executes tests.</p>
+                            <p><strong>DevOps Engineer:</strong> Manages infrastructure and deployment pipelines.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>2.3 Software Process Models</h3>
+                        <p><strong>Waterfall Model:</strong> A linear, sequential approach where each phase must be completed before the next begins. Advantages: clear structure and documentation. Disadvantages: inflexibility and late defect detection.</p>
+                        <p><strong>Waterfall with Prototyping:</strong> Combines waterfall's structure with prototyping to validate requirements early.</p>
+                        <p><strong>V Model:</strong> Extends waterfall by emphasizing testing at each development phase, creating a V-shaped diagram.</p>
+                        <p><strong>Prototyping Model:</strong> Emphasizes building prototypes to explore requirements and design alternatives.</p>
+                    </div>
+
+                    <!-- Quiz for Section 2 -->
+                    <div class="quiz-container" id="quiz-2">
+                        <h3 class="quiz-title">Self-Assessment Quiz: Section 2</h3>
+                        <div id="quiz-content-2" class="quiz-content"></div>
+                        <button class="quiz-submit-btn" data-quiz="2">Submit Quiz</button>
+                        <div id="quiz-results-2" class="quiz-results" style="display: none;"></div>
+                    </div>
+                </section>
+
+                <!-- Section 3 -->
+                <section id="section-3" class="content-section">
+                    <div class="section-header">
+                        <h2>Section 3: Advanced Process Models and Project Management</h2>
+                        <span class="section-badge">3</span>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>3.1 Additional Process Models</h3>
+                        <p><strong>Phased Development:</strong> Divides the project into multiple phases, each delivering a subset of functionality.</p>
+                        <p><strong>Spiral Model:</strong> Combines iterative development with risk management. Each spiral iteration includes planning, risk analysis, development, and evaluation.</p>
+                        <p><strong>Unified Process (UP):</strong> A comprehensive framework emphasizing iterative development and use case-driven requirements.</p>
+                        <p><strong>Agile (Scrum):</strong> An iterative, incremental approach emphasizing flexibility and customer collaboration.</p>
+                        <p><strong>Extreme Programming (XP):</strong> An agile methodology emphasizing technical excellence through pair programming and test-driven development.</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>3.2 Project Management Fundamentals</h3>
+                        <p><strong>Work Breakdown Structure (WBS):</strong> A hierarchical decomposition of the project into manageable phases, steps, and activities.</p>
+                        <p><strong>Project Schedule:</strong> A timeline showing when each activity will occur, considering dependencies and resource constraints.</p>
+                        <p><strong>Activity Graphs:</strong> Visual representations of project activities and their dependencies.</p>
+                        <p><strong>Critical Path Method (CPM):</strong> An algorithm for identifying the longest sequence of dependent activities.</p>
+                        <p><strong>Gantt Charts:</strong> Bar charts showing activities on a timeline, visualizing project schedule, dependencies, and progress.</p>
+                    </div>
+
+                    <!-- Quiz for Section 3 -->
+                    <div class="quiz-container" id="quiz-3">
+                        <h3 class="quiz-title">Self-Assessment Quiz: Section 3</h3>
+                        <div id="quiz-content-3" class="quiz-content"></div>
+                        <button class="quiz-submit-btn" data-quiz="3">Submit Quiz</button>
+                        <div id="quiz-results-3" class="quiz-results" style="display: none;"></div>
+                    </div>
+                </section>
+
+                <!-- Section 4 -->
+                <section id="section-4" class="content-section">
+                    <div class="section-header">
+                        <h2>Section 4: Requirements Engineering</h2>
+                        <span class="section-badge">4</span>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>4.1 Requirements Gathering and Analysis</h3>
+                        <p><strong>Requirements Elicitation:</strong> The process of extracting requirements from stakeholders who may have different perspectives and priorities.</p>
+                        <p><strong>Requirements Definition:</strong> Formal documentation of what the system must do, including functional and non-functional requirements.</p>
+                        <p><strong>Requirements Specification:</strong> Detailed, precise documentation of requirements in a format that developers can use for implementation.</p>
+                        <p><strong>Making Requirements Testable:</strong> Requirements must be specific and measurable so that testers can verify whether they have been met.</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>4.2 Types of Requirements</h3>
+                        <div class="definition-box">
+                            <p><strong>Functional Requirements:</strong> Describe specific behaviors and functions the software must perform. Example: "The system shall calculate payroll."</p>
+                            <p><strong>Non-Functional Requirements:</strong> Describe quality attributes and constraints. Examples: performance, security, reliability, usability.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>4.3 Requirements Tools and Techniques</h3>
+                        <p><strong>Decision Tables:</strong> Tabular representations showing how different combinations of input conditions lead to specific outputs.</p>
+                        <p><strong>State Machines:</strong> Diagrams showing system states and transitions between states based on events or conditions.</p>
+                        <p><strong>UML State-chart:</strong> A standardized notation for representing state machines.</p>
+                        <p><strong>Entity-Relationship Diagram (ERD):</strong> Shows entities and their relationships, useful for understanding data requirements.</p>
+                        <p><strong>Class Diagram:</strong> Shows classes, attributes, methods, and relationships.</p>
+                        <p><strong>Dataflow Diagram (DFD):</strong> Shows how data flows through the system.</p>
+                        <p><strong>Use Case Diagram:</strong> Shows actors, use cases, and relationships.</p>
+                    </div>
+
+                    <!-- Quiz for Section 4 -->
+                    <div class="quiz-container" id="quiz-4">
+                        <h3 class="quiz-title">Self-Assessment Quiz: Section 4</h3>
+                        <div id="quiz-content-4" class="quiz-content"></div>
+                        <button class="quiz-submit-btn" data-quiz="4">Submit Quiz</button>
+                        <div id="quiz-results-4" class="quiz-results" style="display: none;"></div>
+                    </div>
+                </section>
+
+                <!-- Section 5 -->
+                <section id="section-5" class="content-section">
+                    <div class="section-header">
+                        <h2>Section 5: System Modeling and Design</h2>
+                        <span class="section-badge">5</span>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>5.1 Dynamic System Descriptions</h3>
+                        <p><strong>Event Traces and Message Sequence Diagrams:</strong> Show the sequence of interactions between system components over time.</p>
+                        <p><strong>Petrinets:</strong> A formal modeling technique using places (states), transitions (events), and tokens (resources) to model concurrent systems.</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>5.2 Static System Descriptions</h3>
+                        <p><strong>Entity-Relationship Diagram (ERD):</strong> Models the data structure of the system, showing entities, attributes, and relationships.</p>
+                        <p><strong>Class Diagram:</strong> Shows the object-oriented structure of the system, including classes, inheritance hierarchies, and associations.</p>
+                        <p><strong>Dataflow Diagram (DFD):</strong> Models how data flows through the system, showing processes, data stores, and external entities.</p>
+                        <p><strong>Use Case Diagram:</strong> Shows system functionality from the user's perspective, including actors and use cases.</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>5.3 System Descriptions Summary</h3>
+                        <p>Dynamic models show behavior over time, static models show structure, and use case models show functionality from the user's perspective. Together, they provide a comprehensive understanding of system requirements and design.</p>
+                    </div>
+
+                    <!-- Quiz for Section 5 -->
+                    <div class="quiz-container" id="quiz-5">
+                        <h3 class="quiz-title">Self-Assessment Quiz: Section 5</h3>
+                        <div id="quiz-content-5" class="quiz-content"></div>
+                        <button class="quiz-submit-btn" data-quiz="5">Submit Quiz</button>
+                        <div id="quiz-results-5" class="quiz-results" style="display: none;"></div>
+                    </div>
+                </section>
+
+                <!-- Section 6 -->
+                <section id="section-6" class="content-section">
+                    <div class="section-header">
+                        <h2>Section 6: Quality Assurance and Testing</h2>
+                        <span class="section-badge">6</span>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>6.1 Testing Fundamentals</h3>
+                        <p>Testing is the process of executing software to identify defects and verify that it meets requirements. Testing includes:</p>
+                        <ul class="content-list">
+                            <li><strong>Unit Testing:</strong> Testing individual components in isolation.</li>
+                            <li><strong>Integration Testing:</strong> Testing component interactions.</li>
+                            <li><strong>System Testing:</strong> Testing the complete system.</li>
+                            <li><strong>Acceptance Testing:</strong> Verifying user requirements are met.</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>6.2 Quality Metrics</h3>
+                        <p>Quality can be measured through various metrics:</p>
+                        <p><strong>Defect Density:</strong> Defects per thousand lines of code.</p>
+                        <p><strong>Code Coverage:</strong> Percentage of code executed by tests.</p>
+                        <p><strong>Customer Satisfaction:</strong> User satisfaction ratings and feedback.</p>
+                    </div>
+
+                    <!-- Quiz for Section 6 -->
+                    <div class="quiz-container" id="quiz-6">
+                        <h3 class="quiz-title">Self-Assessment Quiz: Section 6</h3>
+                        <div id="quiz-content-6" class="quiz-content"></div>
+                        <button class="quiz-submit-btn" data-quiz="6">Submit Quiz</button>
+                        <div id="quiz-results-6" class="quiz-results" style="display: none;"></div>
+                    </div>
+                </section>
+
+                <!-- Section 7 -->
+                <section id="section-7" class="content-section">
+                    <div class="section-header">
+                        <h2>Section 7: Software Maintenance and Evolution</h2>
+                        <span class="section-badge">7</span>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>7.1 Maintenance Activities</h3>
+                        <p>Software maintenance includes multiple types of activities:</p>
+                        <p><strong>Corrective Maintenance:</strong> Fixing bugs and defects discovered during operation.</p>
+                        <p><strong>Adaptive Maintenance:</strong> Adapting software to new environments or requirements.</p>
+                        <p><strong>Perfective Maintenance:</strong> Improving performance or adding new features.</p>
+                        <p><strong>Preventive Maintenance:</strong> Making changes to prevent future problems.</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>7.2 Software Evolution</h3>
+                        <p>As software systems age and requirements change, they must evolve. Evolution includes adding new features, improving performance, and adapting to new technologies.</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>7.3 Legacy Systems</h3>
+                        <p>Legacy systems are older software systems that continue to provide value but may be difficult to maintain or modify. Managing legacy systems requires careful planning and incremental modernization.</p>
+                    </div>
+
+                    <!-- Quiz for Section 7 -->
+                    <div class="quiz-container" id="quiz-7">
+                        <h3 class="quiz-title">Self-Assessment Quiz: Section 7</h3>
+                        <div id="quiz-content-7" class="quiz-content"></div>
+                        <button class="quiz-submit-btn" data-quiz="7">Submit Quiz</button>
+                        <div id="quiz-results-7" class="quiz-results" style="display: none;"></div>
+                    </div>
+                </section>
+
+                <!-- Final Summary -->
+                <section class="final-summary">
+                    <h2>Course Summary</h2>
+                    <p>Congratulations on completing the Software Engineering exam preparation course! You have covered all seven major sections:</p>
+                    <ol class="summary-list">
+                        <li>Course Introduction and Fundamentals</li>
+                        <li>Engineering Approach and Process Models</li>
+                        <li>Advanced Process Models and Project Management</li>
+                        <li>Requirements Engineering</li>
+                        <li>System Modeling and Design</li>
+                        <li>Quality Assurance and Testing</li>
+                        <li>Software Maintenance and Evolution</li>
+                    </ol>
+                    <p>Use the quizzes to assess your understanding of each section. Review any areas where you scored below 80% to strengthen your knowledge.</p>
+                </section>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Alpha Solutions. All rights reserved.</p>
+            <p>Last updated: January 2026</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
