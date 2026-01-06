@@ -153,7 +153,7 @@ This educational resource is provided as-is for exam preparation purposes.
 
 ## Version
 
-Version 1.0 - January 2024
+Version 1.0 - January 2026
 
 ---
 
